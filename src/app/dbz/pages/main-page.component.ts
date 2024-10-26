@@ -7,6 +7,9 @@ import { Character } from '../interface/character.interface';
 })
 
 export class MainPageComponent {
+    onNewCharacter(character: Character) {
+        console.log(character);
+    }
     public characterList: Character[] = [{
         name: 'Goku',
         power: 1000
