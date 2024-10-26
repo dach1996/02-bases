@@ -6,16 +6,18 @@
         let first = first;
         let last = last;
         let even = even;
-        let odd = odd" class="list-group-item" [ngClass]="{
+        let odd = odd" class="list-group-item d-flex justify-content-between align-items-center" [ngClass]="{
             'list-group-item-primary':first,
             'list-group-item-danger':last
         }">
-        <span>{{character.name}} - </span>
-        <strong>Power: </strong>
-        <span>{{character.power}} </span>
-        <span>Es Part{{even}}</span>
-        <span>Es importa {{odd}}
+        <div>
+            <span>{{character.name}} - </span>
+            <strong>Power: </strong>
+            <span>{{character.power}} </span>
+            <span>Es Part{{even}}</span>
+            <span>Es importa {{odd}} </span>
+        </div>
+        <button class="btn btn-danger" (click)="onDeleteCharacter(index)">X</button>
 
-        </span>
     </li>
 </ul>
